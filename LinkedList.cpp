@@ -81,7 +81,7 @@ void List::insertAsLast(double x)
 {
 	Node * append = new Node(x);
 	if (!empty()) {
-		Node * ptr = first_->next_;
+		Node * ptr = first_;
 		while (ptr->next_ != NULL)
 		{
 			ptr->next_;
