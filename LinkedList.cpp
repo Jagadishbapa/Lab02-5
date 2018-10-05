@@ -77,7 +77,7 @@ void List::insertAsFirst(double x)
 	first_ = new Node(x, first_);
 }
 
-void List::insertAsLast(double x)
+/* void List::insertAsLast(double x)
 {
 	Node * append = new Node(x);
 	if (!empty()) {
@@ -91,6 +91,25 @@ void List::insertAsLast(double x)
 	else {
 		first_ = append;
 	}
+}
+
+*/
+
+void LinkedList::insertAsLast(double x)
+{
+	Node * append = new Node(x);
+	if (!empty()) {
+		Node * ptr = first_;
+		while (ptr->next_ != NULL)
+		{
+			ptr->next_;
+		}
+		ptr = append;
+	}
+	else {
+		first_ = append;
+	}
+	count++;
 }
 
 double List::removeFirst()
